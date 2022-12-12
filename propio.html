@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<title>Subscripción a una RSS</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	
+	<body  class="is-preload">
+			<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="index.html">Inicio</a></li>
+							<li><a href="queson.html">¿Qué son?</a></li>
+							<li><a href="subscripcion.html">Subscripción a una RSS existente</a></li>
+							<li><a href="propio.html">¿Como creo mi propia RSS?</a></li>
+							<li><a href="conclusion.html">Conclusión</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+			<div id="wrapper">
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>¿Cómo creo mi propio RSS?</h1>
+							<p>Crear un RSS es como crear un XML y enlazarlo con una página web</p>
+							<p>A continuación, hay un ejemplo de un código de RSS que se podría implantar en una web</p>
+							<a href="assets/ejemplo.txt">Click Aquí</a>
+							<p>Podemos diferenciar varias etiquetas:</p>
+							<ul>
+							<li><b>rss:</b> La etiqueta de la RSS</li>
+							<li><b>channel:</b> Canal de la RSS</li>
+							<li><b>title:</b> Titulo de la noticia</li>
+							<li><b>link:</b> Link a la noticia</li>
+							<li><b>description:</b> Descripción de la noticia</li>
+							<li><b>item:</b> Contenido de la noticia</li>
+							</ul>
+							<p>La primera línea del documento (la declaracion de XML) define la version de XML y la codificación de caracteres usados en el documento. En este caso el documento usa la versión 1.0 de XML y el set de caracteres UTF8.<br /><br />
+								La siguiente línea es la declaracion del RSS que identifica que el documento es de tipo RSS (en este caso 2.0).<br /><br />
+								La siguiente línea contiene el elemento <i>channel</i> , usado para describir con un titulo el feed del RSS.<br /><br />
+								El elemento <i>channel</i> requiere 3 elementos hijo (y en nuestro caso un cuarto opcional):</p>
+								<ul>
+								<li><i>title</i> Define el título del canal. (El podcast de Radios Libres)</li>
+								<li><i>link</i> Define el hyperlink al canal. (https://www.radioslibres.net/)</li>
+								<li><i>description</i> Describe el canal (Radios Libres presenta su podcast sobre radios comunitarias y tecnologías libres.)</li>
+								<li><i>copyright</i> Muestra el copyright</li>
+								</ul>
+							<p>
+								Cada elemento <i>channel</i> puede tener 1 o mas elementos <i>item</i> .<br /><br />
+								Cada elemento <i>item</i> define un articulo o historia en el feed del RSS.<br /><br />
+								El elemento <i>item</i> tiene 3 elementos hijo.<br /><br />
+								El elemento <i>item</i> requiere 3 elementos hijo (y en nuestro caso algunos opcionales):
+							</p>
+							<ul>
+							<li><i>title</i> Define el título del item. (Episodio 1 – Bienvenida)</li>
+							<li><i>link</i> Define el hyperlink al item. (https://www.radioslibres.net/podcasts/episodio-1.html)</li>
+							<li><i>description</i> Describe el item(En el episodio inaugural de nuestro primer podcast les contaremos cómo será esta temporada.)</li>
+							<li><i>author</i> Muestra el autor del articulo (Radios Libres).</li>
+							<li><i>pubDate</i> Muestra la fecha de publicación de la noticia o articulo ( Thu, 12 Sep 2019).</li>
+							<li><i>enclosure</i> Contiene link de archivo usado en la noticia o articulo (url=»https://www.radioslibres.net/podcasts/episodio1.ogg» type=»audio/ogg» length=»300″ /)</li>
+							</ul>
+							<p>Finalmente, las dos ultimas líneas cierran los elementos <i>channel</i> y <i>rss</i> .</p>
+						</div>
+					</section>
+			</div>
+			<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; JJ S.A. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
